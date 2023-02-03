@@ -1,0 +1,28 @@
+let getSortedArray = function (array, keyName) {
+  
+  for (let i = 0; i < array.length - 1; i++) {
+  let minValue = array[i];
+  
+    for (let j = i + 1; j < array.length; j++) {
+      if (minValue[keyName] > array[j][keyName]) {
+        
+        minValue = array[j];
+        let swap = array[i];
+        array[i] = minValue;
+        array[j] = swap;
+      
+      };
+    };
+  };
+  return array;
+}
+
+/*
+
+Создайте функцию getSortedArray. У неё должно быть два параметра. Первый — массив, который нужно отсортировать. Второй — имя ключа в объектах. Именно по значению этого ключа нужно будет делать сортировку.
+
+Функция должна возвращать отсортированный массив объектов.
+
+Значения в массиве должны увеличиваться от меньшего к большему.
+
+*/
